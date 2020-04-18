@@ -1,0 +1,15 @@
+
+*.atsln
+*.atsuo
+*.xml
+*.cppproj
+*.eep
+*.elf
+*.hex
+*.lss
+*.map
+*.srec
+*.d
+*.o
+Drivers/Release/Makefile
+*.mk
