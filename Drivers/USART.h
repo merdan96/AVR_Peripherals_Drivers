@@ -10,11 +10,11 @@
 
 #include <stdint.h>
 #include <avr/io.h>
-#include <avr/interrupt.h>
+#include <stdarg.h>
 
 void serialBegin(uint32_t fcpu, uint32_t baudrate);
 
-void serialTransmit(uint8_t character);
+void serialWrite(uint8_t character);
 
 uint8_t serialGetChar();
 
@@ -22,12 +22,11 @@ uint8_t serialGetLine(uint8_t* buf, uint8_t MAX_LEN);
 
 void serialPrint(const char* word);
 
-void serialPrintInt(uint32_t integer);
+void serialPrintf(const char* seq, ...);
 
-void serialPrintlnInt(uint32_t integer);
+void serialPrintInt(int32_t integer);
 
-void serialPrintln(char word);
+void serialPrintDouble(double number);
 
-void serialPrintln(const char* word);
 
 #endif /* USART_H_ */

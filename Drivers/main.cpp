@@ -14,13 +14,12 @@ uint8_t buf[BUF_SIZE];
 int main(void)
 {
 	serialBegin(F_CPU, 9600);
+	serialPrint("\n");
     while (1) 
     {
 		serialPrint("Enter a Message: ");
 		uint8_t length = serialGetLine(buf, BUF_SIZE);
-		serialPrint((const char*)buf);
-		serialPrint(", L = ");
-		serialPrintlnInt(length);
+		serialPrintf("/s, L = /f/c\n", buf, length*1.0, '%');
     }
 }
 

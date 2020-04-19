@@ -13,3 +13,4 @@
 *.o
 Drivers/Release/Makefile
 *.mk
+Drivers/Debug/Makefile
